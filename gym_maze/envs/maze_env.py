@@ -13,8 +13,8 @@ class MazeEnv(gym.Env):
         self.observation_space = self.env.get_state().shape
         self.action_space = 4
 
-    def step(self, action, type):
-        return self.env.step(action, type)
+    def step(self, action):
+        return self.env.step(action)
 
     def reset(self):
         return self.env.reset()
